@@ -10,9 +10,11 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Salut tous le monde !"/>
         <TextBlock Grid.Row="1">ça va ou quoi ?</TextBlock>
-        <Grid Grid.Row="1"/>
+        <Button Grid.Row="2" Content="Click me" HorizontalAlignment="Left" Click="Button_Click"/>
+        <Grid/>
     </Grid>
 </Window>

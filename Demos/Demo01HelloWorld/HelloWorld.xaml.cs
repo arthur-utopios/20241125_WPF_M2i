@@ -23,5 +23,15 @@ namespace Demo01HelloWorld
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            if(sender is Button button)
+            {
+                MessageBox.Show("Salut!");
+                button.Content = "J'ai été cliqué !";
+            }
+        }
     }
 }

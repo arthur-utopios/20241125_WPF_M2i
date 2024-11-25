@@ -32,6 +32,7 @@ namespace Demo01HelloWorld
                 MessageBox.Show("Salut!");
                 button.Content = "J'ai été cliqué !";
             }
+
         }
     }
 }

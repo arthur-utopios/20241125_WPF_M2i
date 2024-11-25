@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Demo01HelloWorld"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="MaGrille">
+    <Grid x:Name="maGrille">
         <Button Content="Button" Height="100" Width="200"/>
         <Ellipse HorizontalAlignment="Left" Height="100" Margin="633,267,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
         <DatePicker HorizontalAlignment="Left" Margin="572,146,0,0" VerticalAlignment="Top"/>

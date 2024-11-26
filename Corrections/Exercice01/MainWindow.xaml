@@ -1,0 +1,56 @@
+﻿<Window x:Class="Exercice01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercice01"
+        mc:Ignorable="d"
+        Title="Réservations" Height="450" Width="800">
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Padding="10">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#ff8a00" Offset="0.0"/>
+                    <GradientStop Color="#e52e71" Offset="1.1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <TextBlock Text="Réservation de l'hôtel" HorizontalAlignment="Center" FontSize="24" Foreground="WhiteSmoke"/>
+        </Border>
+
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Margin="20">
+                <TextBlock Text="Liste des réservations" FontSize="16" FontWeight="DemiBold"/>
+                <ListBox x:Name="ReservationsList" Height="200" Margin="0, 10"/>
+                <Button Content="Supprimer" Padding="5" Click="DeleteReservation"/>
+            </StackPanel>
+
+            <Border Grid.Column="1" Margin="20" BorderThickness="1" BorderBrush="Gray" Padding="20">
+                <StackPanel>
+                    <TextBlock Text="Créer une nouvelle réservation" FontSize="18" FontWeight="Bold"/>
+                    <UniformGrid Rows="3" Columns="2"  Margin="0, 20">
+                        <Label Content="Nom:" HorizontalAlignment="Right"/>
+                        <TextBox x:Name="LastName"/>                        
+                        <Label Content="Prénom:" HorizontalAlignment="Right"/>
+                        <TextBox x:Name="FirstName"/>                        
+                        <Label Content="Date arrivée:" HorizontalAlignment="Right"/>
+                        <DatePicker x:Name="ArrrivalDate"/>
+
+                    </UniformGrid>
+
+                    <Button Content="Ajouter" HorizontalAlignment="Right" Padding="10, 5" Click="AddReservation"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+
+
+        <Border DockPanel.Dock="Bottom" Padding="5" Background="#002a32">
+            <TextBlock Text="Copyright Hostel.com 2024 ©" HorizontalAlignment="Center" Foreground="WhiteSmoke"/>
+        </Border>
+    </DockPanel>
+</Window>

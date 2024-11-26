@@ -11,7 +11,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
+        </Grid.RowDefinitions> 
         <TextBlock Text="Salut tous le monde !"/>
         <TextBlock Grid.Row="1">ça va ou quoi ?</TextBlock>
         <Button Grid.Row="2" Content="Click me" HorizontalAlignment="Left" Click="Button_Click"/>

@@ -6,6 +6,27 @@
         xmlns:local="clr-namespace:Demo02Calculatrice"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="350">
+    <Window.Resources>
+        <ResourceDictionary>
+            <!-- On déclare une solid color qu'on va pouvoir appliquer à d'autre éléments -->
+            <!-- On y fait référence grâce à l'attribut x:Key qui nous permet de lui donner un id unique -->
+            <SolidColorBrush x:Key="OrangeAccent">#ff9f0a</SolidColorBrush>
+            
+            <!-- On applique un style à tous les boutons -->
+            <Style TargetType="Button">
+                <!--Modifications des propriétés du boutton-->
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Margin" Value="2"/>
+            </Style>
+            
+            <!-- On créé un style pour un boutton custom qu'on pourra appliquer grâce au binding -->
+            <Style TargetType="Button" x:Key="OperationButton" BasedOn="{StaticResource {x:Type Button}}">
+                <!--On utilise la couleur précédemment créée !-->
+                <Setter Property="Background" Value="{StaticResource OrangeAccent}"/>
+                <Setter Property="Foreground" Value="White"/>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
@@ -49,11 +70,11 @@
         <Button Content="%" Grid.Row="1" Grid.Column="2" Click="PercentageButton_Click"/>
 
         <!-- Opérations -->
-        <Button Content="÷" Grid.Row="1" Grid.Column="3" Click="OperationButton_Click"/>
-        <Button Content="×" Grid.Row="2" Grid.Column="3" Click="OperationButton_Click" />
-        <Button Content="–" Grid.Row="3" Grid.Column="3" Click="OperationButton_Click" />
-        <Button Content="+" Grid.Row="4" Grid.Column="3" Click="OperationButton_Click" />
-        <Button Content="=" Grid.Row="5" Grid.Column="3" Click="EqualButton_Click"/>
+        <Button Content="÷" Grid.Row="1" Style="{StaticResource OperationButton}" Grid.Column="3" Click="OperationButton_Click"/>
+        <Button Content="×" Grid.Row="2" Style="{StaticResource OperationButton}" Grid.Column="3" Click="OperationButton_Click" />
+        <Button Content="–" Grid.Row="3" Style="{StaticResource OperationButton}" Grid.Column="3" Click="OperationButton_Click" />
+        <Button Content="+" Grid.Row="4" Style="{StaticResource OperationButton}" Grid.Column="3" Click="OperationButton_Click" />
+        <Button Content="=" Grid.Row="5" Grid.Column="3" Click="EqualButton_Click" Background="#196aa7" Foreground="White"/>
 
     </Grid>
 </Window>

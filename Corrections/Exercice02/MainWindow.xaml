@@ -1,0 +1,23 @@
+﻿<Window x:Class="Exercice02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercice02"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Lun" Margin="5"/>
+            <Button Content="Mar" Margin="5"/>
+            <Button Content="Mer" Margin="5"/>
+            <Button Content="Jeu" Margin="5"/>
+            <Button Content="Ven" Margin="5"/>
+            <Button Content="Sam" Margin="5"/>
+            <Button Content="Dim" Margin="5"/>
+        </StackPanel>
+        <StackPanel>
+            <Button Content="Switch to alternative version" Click="NavigateToAlternative"/>
+        </StackPanel>
+    </Grid>
+</Window>

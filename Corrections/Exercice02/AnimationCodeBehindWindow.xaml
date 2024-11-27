@@ -1,0 +1,46 @@
+﻿<Window x:Class="Exercice02.AnimationCodeBehindWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercice02"
+        mc:Ignorable="d"
+        Title="AnimationCodeBehind" Height="450" Width="800">
+    <Window.Resources>
+        <!-- Couleur de M2i -->
+        <SolidColorBrush Color="#f83131" x:Key="RedM2i"/>
+
+        <!-- On stylise le bouton de base -->
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="120"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+
+            <!-- On rédéfinit l'apparence complète du bouton -->
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <!-- Le contenu du bouton -->
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderThickness="3" Width="{TemplateBinding Width}" Height="{TemplateBinding Width}" CornerRadius="10" BorderBrush="{StaticResource RedM2i}" Background="{TemplateBinding Background}">
+                            <!-- On réutilise la logique du bouton grâce au ContentPresenter -->
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Lun" Margin="5" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="Mar" Margin="5" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="Mer" Margin="5" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="Jeu" Margin="5" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="Ven" Margin="5" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="Sam" Margin="5" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="Dim" Margin="5" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+        </StackPanel>
+    </Grid>
+</Window>

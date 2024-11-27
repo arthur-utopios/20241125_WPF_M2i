@@ -11,7 +11,7 @@
             <TextBlock Background="Red" Text="{Binding FirstName}"/>
             <TextBox Text="{Binding Message, Mode=OneWayToSource}"/>
             <TextBox Text="{Binding Message, Mode=OneWay}"/>
-            <TextBox Text="{Binding Message}"/>
+            <TextBox Text="{Binding Message, Mode=OneTime}"/>
             <Button Content="Afficher message" Click="ShowMessage"/>
         </StackPanel>
 

@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo06Animations", "Demo06A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo07CustomControl", "Demo07CustomControl\Demo07CustomControl.csproj", "{D053F2C3-E121-4B54-B5B6-71C017241F7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo08MVVM", "Demo08MVVM\Demo08MVVM.csproj", "{4F6B376E-78BC-4B8A-ABB3-39ED814D5CB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{D053F2C3-E121-4B54-B5B6-71C017241F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D053F2C3-E121-4B54-B5B6-71C017241F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D053F2C3-E121-4B54-B5B6-71C017241F7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F6B376E-78BC-4B8A-ABB3-39ED814D5CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F6B376E-78BC-4B8A-ABB3-39ED814D5CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F6B376E-78BC-4B8A-ABB3-39ED814D5CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F6B376E-78BC-4B8A-ABB3-39ED814D5CB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

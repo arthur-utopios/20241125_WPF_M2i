@@ -1,0 +1,17 @@
+﻿<Window x:Class="Demo08MVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Demo08MVVM"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Width="200">
+        <Label Content="Nom"/>
+        <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"/>
+        <Label Content="Prix"/>
+        <TextBox Text="{Binding Price ,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"/>
+        <Button Content="Save" Command="{Binding AddProductCommand}"/>
+        <Button Content="Show product" Command="{Binding ShowProductCommand}"/>
+    </StackPanel>
+</Window>

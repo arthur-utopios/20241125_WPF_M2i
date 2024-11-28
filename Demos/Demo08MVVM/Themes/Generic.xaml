@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="TextBox">
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <StackPanel>
+                        <!-- Correspond au champ qui est en erreur -->
+                        <AdornedElementPlaceholder/>
+                        <!-- Zone où on affiche nos erreurs-->
+                        <!-- Affichage de la première erreur de la liste retournée de notre dictionnaire -->
+                        <TextBlock Foreground="Red" Text="{Binding [0].ErrorContent}" Margin="0, 0, 0, 15"/>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="True">
+                <Setter Property="BorderBrush" Value="Red"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Margin" Value="0, 0, 0, 20"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
